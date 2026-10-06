@@ -1,0 +1,1122 @@
+{
+  "inventory": [
+    {
+      "file": "olist_customers_dataset.csv",
+      "rows": 99441,
+      "cols": 5,
+      "used": true,
+      "sha256": "983a422239e1712ded753b3bf9ecf47dc73f144d306029dcfa99e70a226883d2"
+    },
+    {
+      "file": "olist_geolocation_dataset.csv",
+      "rows": 1000163,
+      "cols": 5,
+      "used": false,
+      "sha256": "b514f6fc991b9566aeba02aa5d67e2c3630f034b60a0e05aa0d082a3b66d88d6"
+    },
+    {
+      "file": "olist_order_items_dataset.csv",
+      "rows": 112650,
+      "cols": 7,
+      "used": true,
+      "sha256": "0bc4d068c4fe38cbb01bd90e8746e3c613fe7b4baef75fab7b0e329701c3e279"
+    },
+    {
+      "file": "olist_order_payments_dataset.csv",
+      "rows": 103886,
+      "cols": 5,
+      "used": true,
+      "sha256": "4f713964f2815dbbaa40b9488268c55aac3627bfce5aa96cf58d1f3616de3cc0"
+    },
+    {
+      "file": "olist_order_reviews_dataset.csv",
+      "rows": 99224,
+      "cols": 7,
+      "used": true,
+      "sha256": "012b61c7593e34f51fa614efdf802b9c7056ce6aae5307ddb93236e7cfc797d7"
+    },
+    {
+      "file": "olist_orders_dataset.csv",
+      "rows": 99441,
+      "cols": 8,
+      "used": true,
+      "sha256": "8df58ef3d2d7e9944010f7beecd9b75367f5588ec6e3c91cec19ae3345ef9ecf"
+    },
+    {
+      "file": "olist_products_dataset.csv",
+      "rows": 32951,
+      "cols": 9,
+      "used": false,
+      "sha256": "3e6569628a17fbc75fd206ee357b59e20364b9afa90f5b6cd5b4d624c58aa9cc"
+    },
+    {
+      "file": "olist_sellers_dataset.csv",
+      "rows": 3095,
+      "cols": 4,
+      "used": false,
+      "sha256": "1f643d2b950373b85735e7794b20986f528d7a000432e7c6f9bcbb44d0846a0e"
+    },
+    {
+      "file": "product_category_name_translation.csv",
+      "rows": 71,
+      "cols": 2,
+      "used": false,
+      "sha256": "a81f0d1f27b27e7293f761bc79e3ce8f348ee39c4b3ed3e49bde38f478586278"
+    }
+  ],
+  "profile": {
+    "customers": {
+      "customer_id": {
+        "type": "string",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 99441,
+        "top": {}
+      },
+      "customer_unique_id": {
+        "type": "string",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 96096,
+        "top": {}
+      },
+      "customer_zip_code_prefix": {
+        "type": "string",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 14994,
+        "top": {}
+      },
+      "customer_city": {
+        "type": "str",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 4119,
+        "top": {
+          "sao paulo": 15540,
+          "rio de janeiro": 6882,
+          "belo horizonte": 2773
+        }
+      },
+      "customer_state": {
+        "type": "str",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 27,
+        "top": {
+          "SP": 41746,
+          "RJ": 12852,
+          "MG": 11635
+        }
+      }
+    },
+    "order_items": {
+      "order_id": {
+        "type": "string",
+        "n": 112650,
+        "non_missing": 112650,
+        "missing": 0,
+        "distinct": 98666,
+        "top": {}
+      },
+      "order_item_id": {
+        "type": "string",
+        "n": 112650,
+        "non_missing": 112650,
+        "missing": 0,
+        "distinct": 21,
+        "top": {}
+      },
+      "product_id": {
+        "type": "string",
+        "n": 112650,
+        "non_missing": 112650,
+        "missing": 0,
+        "distinct": 32951,
+        "top": {}
+      },
+      "seller_id": {
+        "type": "string",
+        "n": 112650,
+        "non_missing": 112650,
+        "missing": 0,
+        "distinct": 3095,
+        "top": {}
+      },
+      "shipping_limit_date": {
+        "type": "datetime64[us]",
+        "n": 112650,
+        "non_missing": 112650,
+        "missing": 0,
+        "distinct": 93318,
+        "top": {
+          "2018-03-01 02:50:48": 21,
+          "2017-07-21 18:25:23": 21,
+          "2017-08-30 14:30:23": 20
+        },
+        "min": "2016-09-19 00:15:34",
+        "max": "2020-04-09 22:35:08"
+      },
+      "price": {
+        "type": "float64",
+        "n": 112650,
+        "non_missing": 112650,
+        "missing": 0,
+        "distinct": 5968,
+        "top": {
+          "59.9": 2481,
+          "69.9": 1987,
+          "49.9": 1953
+        },
+        "min": 0.85,
+        "max": 6735.0,
+        "mean": 120.65373901464713,
+        "median": 74.99,
+        "var": 33721.41953116785,
+        "std": 183.6339280502594,
+        "outliers": 8427
+      },
+      "freight_value": {
+        "type": "float64",
+        "n": 112650,
+        "non_missing": 112650,
+        "missing": 0,
+        "distinct": 6999,
+        "top": {
+          "15.1": 3707,
+          "7.78": 2262,
+          "14.1": 1875
+        },
+        "min": 0.0,
+        "max": 409.68,
+        "mean": 19.990319928983578,
+        "median": 16.26,
+        "var": 249.8424520578945,
+        "std": 15.806405412297082,
+        "outliers": 12134
+      }
+    },
+    "order_payments": {
+      "order_id": {
+        "type": "string",
+        "n": 103886,
+        "non_missing": 103886,
+        "missing": 0,
+        "distinct": 99440,
+        "top": {}
+      },
+      "payment_sequential": {
+        "type": "int64",
+        "n": 103886,
+        "non_missing": 103886,
+        "missing": 0,
+        "distinct": 29,
+        "top": {
+          "1": 99360,
+          "2": 3039,
+          "3": 581
+        },
+        "min": 1,
+        "max": 29
+      },
+      "payment_type": {
+        "type": "str",
+        "n": 103886,
+        "non_missing": 103886,
+        "missing": 0,
+        "distinct": 5,
+        "top": {
+          "credit_card": 76795,
+          "boleto": 19784,
+          "voucher": 5775
+        }
+      },
+      "payment_installments": {
+        "type": "int64",
+        "n": 103886,
+        "non_missing": 103886,
+        "missing": 0,
+        "distinct": 24,
+        "top": {
+          "1": 52546,
+          "2": 12413,
+          "3": 10461
+        },
+        "min": 0,
+        "max": 24,
+        "mean": 2.853348863176944,
+        "median": 1.0,
+        "var": 7.22024132387256,
+        "std": 2.687050673856479,
+        "outliers": 6313
+      },
+      "payment_value": {
+        "type": "float64",
+        "n": 103886,
+        "non_missing": 103886,
+        "missing": 0,
+        "distinct": 29077,
+        "top": {
+          "50.0": 324,
+          "20.0": 274,
+          "100.0": 255
+        },
+        "min": 0.0,
+        "max": 13664.08,
+        "mean": 154.10038041699556,
+        "median": 100.0,
+        "var": 47303.66781639279,
+        "std": 217.49406386472435,
+        "outliers": 7981
+      }
+    },
+    "order_reviews": {
+      "review_id": {
+        "type": "string",
+        "n": 99224,
+        "non_missing": 99224,
+        "missing": 0,
+        "distinct": 98410,
+        "top": {}
+      },
+      "order_id": {
+        "type": "string",
+        "n": 99224,
+        "non_missing": 99224,
+        "missing": 0,
+        "distinct": 98673,
+        "top": {}
+      },
+      "review_score": {
+        "type": "int64",
+        "n": 99224,
+        "non_missing": 99224,
+        "missing": 0,
+        "distinct": 5,
+        "top": {
+          "5": 57328,
+          "4": 19142,
+          "1": 11424
+        },
+        "min": 1,
+        "max": 5
+      },
+      "review_comment_title": {
+        "type": "str",
+        "n": 99224,
+        "non_missing": 11568,
+        "missing": 87656,
+        "distinct": 4527,
+        "top": {}
+      },
+      "review_comment_message": {
+        "type": "str",
+        "n": 99224,
+        "non_missing": 40977,
+        "missing": 58247,
+        "distinct": 36159,
+        "top": {}
+      },
+      "review_creation_date": {
+        "type": "datetime64[us]",
+        "n": 99224,
+        "non_missing": 99224,
+        "missing": 0,
+        "distinct": 636,
+        "top": {
+          "2017-12-19 00:00:00": 463,
+          "2018-08-28 00:00:00": 452,
+          "2017-12-20 00:00:00": 440
+        },
+        "min": "2016-10-02 00:00:00",
+        "max": "2018-08-31 00:00:00"
+      },
+      "review_answer_timestamp": {
+        "type": "datetime64[us]",
+        "n": 99224,
+        "non_missing": 99224,
+        "missing": 0,
+        "distinct": 98248,
+        "top": {
+          "2017-06-15 23:21:05": 4,
+          "2017-02-14 13:58:48": 3,
+          "2017-09-11 09:58:09": 3
+        },
+        "min": "2016-10-07 18:32:28",
+        "max": "2018-10-29 12:27:35"
+      }
+    },
+    "orders": {
+      "order_id": {
+        "type": "string",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 99441,
+        "top": {}
+      },
+      "customer_id": {
+        "type": "string",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 99441,
+        "top": {}
+      },
+      "order_status": {
+        "type": "str",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 8,
+        "top": {
+          "delivered": 96478,
+          "shipped": 1107,
+          "canceled": 625
+        }
+      },
+      "order_purchase_timestamp": {
+        "type": "datetime64[us]",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 98875,
+        "top": {
+          "2018-03-31 15:08:21": 3,
+          "2017-11-20 10:59:08": 3,
+          "2018-08-02 12:06:09": 3
+        },
+        "min": "2016-09-04 21:15:19",
+        "max": "2018-10-17 17:30:18"
+      },
+      "order_approved_at": {
+        "type": "datetime64[us]",
+        "n": 99441,
+        "non_missing": 99281,
+        "missing": 160,
+        "distinct": 90733,
+        "top": {
+          "2018-02-27 04:31:10": 9,
+          "2017-11-07 07:30:38": 7,
+          "2018-02-06 05:31:52": 7
+        },
+        "min": "2016-09-15 12:16:38",
+        "max": "2018-09-03 17:40:06"
+      },
+      "order_delivered_carrier_date": {
+        "type": "datetime64[us]",
+        "n": 99441,
+        "non_missing": 97658,
+        "missing": 1783,
+        "distinct": 81018,
+        "top": {
+          "2018-05-09 15:48:00": 47,
+          "2018-05-10 18:29:00": 32,
+          "2018-05-07 12:31:00": 21
+        },
+        "min": "2016-10-08 10:34:01",
+        "max": "2018-09-11 19:48:28"
+      },
+      "order_delivered_customer_date": {
+        "type": "datetime64[us]",
+        "n": 99441,
+        "non_missing": 96476,
+        "missing": 2965,
+        "distinct": 95664,
+        "top": {
+          "2018-05-14 20:02:44": 3,
+          "2016-10-27 17:32:07": 3,
+          "2018-05-08 23:38:46": 3
+        },
+        "min": "2016-10-11 13:46:32",
+        "max": "2018-10-17 13:22:46"
+      },
+      "order_estimated_delivery_date": {
+        "type": "datetime64[us]",
+        "n": 99441,
+        "non_missing": 99441,
+        "missing": 0,
+        "distinct": 459,
+        "top": {
+          "2017-12-20 00:00:00": 522,
+          "2018-03-12 00:00:00": 516,
+          "2018-03-13 00:00:00": 513
+        },
+        "min": "2016-09-30 00:00:00",
+        "max": "2018-11-12 00:00:00"
+      }
+    }
+  },
+  "missing": {
+    "customers": {
+      "customer_id": 0,
+      "customer_unique_id": 0,
+      "customer_zip_code_prefix": 0,
+      "customer_city": 0,
+      "customer_state": 0
+    },
+    "order_items": {
+      "order_id": 0,
+      "order_item_id": 0,
+      "product_id": 0,
+      "seller_id": 0,
+      "shipping_limit_date": 0,
+      "price": 0,
+      "freight_value": 0
+    },
+    "order_payments": {
+      "order_id": 0,
+      "payment_sequential": 0,
+      "payment_type": 0,
+      "payment_installments": 0,
+      "payment_value": 0
+    },
+    "order_reviews": {
+      "review_id": 0,
+      "order_id": 0,
+      "review_score": 0,
+      "review_comment_title": 87656,
+      "review_comment_message": 58247,
+      "review_creation_date": 0,
+      "review_answer_timestamp": 0
+    },
+    "orders": {
+      "order_id": 0,
+      "customer_id": 0,
+      "order_status": 0,
+      "order_purchase_timestamp": 0,
+      "order_approved_at": 160,
+      "order_delivered_carrier_date": 1783,
+      "order_delivered_customer_date": 2965,
+      "order_estimated_delivery_date": 0
+    }
+  },
+  "duplicates": {
+    "customers": 0,
+    "order_items": 0,
+    "order_payments": 0,
+    "order_reviews": 0,
+    "orders": 0
+  },
+  "date_errors": {
+    "orders.order_purchase_timestamp": 0,
+    "orders.order_approved_at": 0,
+    "orders.order_delivered_carrier_date": 0,
+    "orders.order_delivered_customer_date": 0,
+    "orders.order_estimated_delivery_date": 0,
+    "order_items.shipping_limit_date": 0,
+    "order_reviews.review_creation_date": 0,
+    "order_reviews.review_answer_timestamp": 0
+  },
+  "anomalies": {
+    "negative_price": 0,
+    "negative_freight": 0,
+    "negative_payment": 0,
+    "zero_price": 0,
+    "zero_freight": 383,
+    "zero_payment": 9,
+    "invalid_review": 0,
+    "delivered_before_purchase": 0,
+    "estimate_before_purchase": 0,
+    "approved_before_purchase": 0,
+    "carrier_before_purchase": 166,
+    "delivery_before_carrier": 23,
+    "duplicated_item_key": 0,
+    "duplicated_payment_key": 0,
+    "repeated_review_ids": 814
+  },
+  "repeat_reviews": {
+    "orders": 547,
+    "removed_rows": 551,
+    "rows_in_affected_orders": 1098
+  },
+  "stats": {
+    "delivery_days": {
+      "n": 96470,
+      "mean": 12.558217098051976,
+      "median": 10.217476851851853,
+      "mode": 2.0690625,
+      "mode_count": 3,
+      "mode_ties": 57,
+      "min": 0.5334143518518518,
+      "q1": 6.766203703703704,
+      "q3": 15.720182291666667,
+      "p10": 4.159708333333333,
+      "p90": 23.09637731481482,
+      "p95": 29.274046296296298,
+      "max": 209.6286111111111,
+      "range": 209.09519675925924,
+      "var": 91.12910159184436,
+      "std": 9.54615637792742,
+      "cv_pct": 76.01522018128047,
+      "iqr": 8.953978587962963,
+      "lower_fence": -6.664764178240739,
+      "upper_fence": 29.15115017361111,
+      "outliers": 4896
+    },
+    "delay_days": {
+      "n": 96470,
+      "mean": -11.875888877371203,
+      "median": -12.0,
+      "mode": -14.0,
+      "mode_count": 7126,
+      "mode_ties": 1,
+      "min": -147.0,
+      "q1": -17.0,
+      "q3": -7.0,
+      "p10": -22.0,
+      "p90": -2.0,
+      "p95": 3.0,
+      "max": 188.0,
+      "range": 335.0,
+      "var": 103.67526373787193,
+      "std": 10.182105073994864,
+      "cv_pct": null,
+      "iqr": 10.0,
+      "lower_fence": -32.0,
+      "upper_fence": 8.0,
+      "outliers": 4297
+    },
+    "value_items": {
+      "n": 98666,
+      "mean": 137.75407637889447,
+      "median": 86.9,
+      "mode": 59.9,
+      "mode_count": 1723,
+      "mode_ties": 1,
+      "min": 0.85,
+      "q1": 45.9,
+      "q3": 149.9,
+      "p10": 25.0,
+      "p90": 269.9,
+      "p95": 399.9,
+      "max": 13440.0,
+      "range": 13439.15,
+      "var": 44371.37724337182,
+      "std": 210.64514531166347,
+      "cv_pct": 152.91391067969641,
+      "iqr": 104.0,
+      "lower_fence": -110.1,
+      "upper_fence": 305.9,
+      "outliers": 7913
+    },
+    "freight": {
+      "n": 98666,
+      "mean": 22.82356171325482,
+      "median": 17.17,
+      "mode": 15.1,
+      "mode_count": 2952,
+      "mode_ties": 1,
+      "min": 0.0,
+      "q1": 13.85,
+      "q3": 24.04,
+      "p10": 9.34,
+      "p90": 39.495000000000005,
+      "p95": 54.96,
+      "max": 1794.96,
+      "range": 1794.96,
+      "var": 468.76188133119877,
+      "std": 21.65090948046291,
+      "cv_pct": 94.8620980041389,
+      "iqr": 10.19,
+      "lower_fence": -1.4350000000000005,
+      "upper_fence": 39.325,
+      "outliers": 9941
+    },
+    "payment_total": {
+      "n": 99440,
+      "mean": 160.9902666934835,
+      "median": 105.29,
+      "mode": 77.57,
+      "mode_count": 254,
+      "mode_ties": 1,
+      "min": 0.0,
+      "q1": 62.01,
+      "q3": 176.97,
+      "p10": 39.6,
+      "p90": 308.24300000000017,
+      "p95": 452.98749999999825,
+      "max": 13664.08,
+      "range": 13664.08,
+      "var": 49262.36031220474,
+      "std": 221.95125661325898,
+      "cv_pct": 137.86625811102098,
+      "iqr": 114.96000000000001,
+      "lower_fence": -110.43,
+      "upper_fence": 349.40999999999997,
+      "outliers": 7866
+    },
+    "freight_ratio": {
+      "n": 98666,
+      "mean": 30.83886871973845,
+      "median": 22.437395659432386,
+      "mode": 0.0,
+      "mode_count": 338,
+      "mode_ties": 1,
+      "min": 0.0,
+      "q1": 13.186440677966102,
+      "q3": 38.01908724937511,
+      "p10": 7.798215416270972,
+      "p90": 62.250305748063596,
+      "p95": 83.9355197331851,
+      "max": 2144.7058823529414,
+      "range": 2144.7058823529414,
+      "var": 990.7523830167978,
+      "std": 31.47621932533826,
+      "cv_pct": 102.06671201655291,
+      "iqr": 24.832646571409008,
+      "lower_fence": -24.062529179147404,
+      "upper_fence": 75.26805710648861,
+      "outliers": 6563
+    }
+  },
+  "review_groups": [
+    {
+      "late": false,
+      "n": 89443,
+      "median_review": 5.0,
+      "low_reviews": 8289,
+      "low_pct": 9.267354628087162,
+      "median_delivery": 9.803587962962963
+    },
+    {
+      "late": true,
+      "n": 6381,
+      "median_review": 1.0,
+      "low_reviews": 3983,
+      "low_pct": 62.419683435198245,
+      "median_delivery": 31.175856481481482
+    }
+  ],
+  "states": [
+    {
+      "customer_state": "AL",
+      "n": 397,
+      "late_n": 85,
+      "median_days": 22.332916666666666,
+      "late_pct": 21.410579345088163
+    },
+    {
+      "customer_state": "MA",
+      "n": 717,
+      "late_n": 125,
+      "median_days": 19.190601851851852,
+      "late_pct": 17.433751743375176
+    },
+    {
+      "customer_state": "SE",
+      "n": 335,
+      "late_n": 51,
+      "median_days": 18.014305555555556,
+      "late_pct": 15.223880597014926
+    },
+    {
+      "customer_state": "PI",
+      "n": 476,
+      "late_n": 66,
+      "median_days": 16.29226851851852,
+      "late_pct": 13.865546218487395
+    },
+    {
+      "customer_state": "CE",
+      "n": 1279,
+      "late_n": 176,
+      "median_days": 18.20920138888889,
+      "late_pct": 13.760750586395622
+    },
+    {
+      "customer_state": "RR",
+      "n": 41,
+      "late_n": 5,
+      "median_days": 25.00730324074074,
+      "late_pct": 12.195121951219512
+    },
+    {
+      "customer_state": "BA",
+      "n": 3256,
+      "late_n": 396,
+      "median_days": 16.91396412037037,
+      "late_pct": 12.162162162162161
+    },
+    {
+      "customer_state": "RJ",
+      "n": 12350,
+      "late_n": 1495,
+      "median_days": 12.04164351851852,
+      "late_pct": 12.105263157894736
+    },
+    {
+      "customer_state": "PA",
+      "n": 946,
+      "late_n": 106,
+      "median_days": 21.078391203703703,
+      "late_pct": 11.20507399577167
+    },
+    {
+      "customer_state": "ES",
+      "n": 1995,
+      "late_n": 214,
+      "median_days": 13.636956018518518,
+      "late_pct": 10.726817042606516
+    },
+    {
+      "customer_state": "PB",
+      "n": 517,
+      "late_n": 54,
+      "median_days": 18.15244212962963,
+      "late_pct": 10.444874274661508
+    },
+    {
+      "customer_state": "TO",
+      "n": 274,
+      "late_n": 27,
+      "median_days": 15.865885416666668,
+      "late_pct": 9.854014598540147
+    },
+    {
+      "customer_state": "MS",
+      "n": 701,
+      "late_n": 68,
+      "median_days": 13.943796296296297,
+      "late_pct": 9.70042796005706
+    },
+    {
+      "customer_state": "PE",
+      "n": 1593,
+      "late_n": 153,
+      "median_days": 15.702766203703703,
+      "late_pct": 9.6045197740113
+    },
+    {
+      "customer_state": "RN",
+      "n": 474,
+      "late_n": 44,
+      "median_days": 16.060254629629632,
+      "late_pct": 9.282700421940929
+    },
+    {
+      "customer_state": "SC",
+      "n": 3546,
+      "late_n": 291,
+      "median_days": 13.014351851851853,
+      "late_pct": 8.20642978003384
+    },
+    {
+      "customer_state": "GO",
+      "n": 1957,
+      "late_n": 128,
+      "median_days": 13.949606481481482,
+      "late_pct": 6.540623403168114
+    },
+    {
+      "customer_state": "RS",
+      "n": 5344,
+      "late_n": 325,
+      "median_days": 13.177488425925926,
+      "late_pct": 6.081586826347305
+    },
+    {
+      "customer_state": "MT",
+      "n": 886,
+      "late_n": 53,
+      "median_days": 16.109050925925924,
+      "late_pct": 5.981941309255079
+    },
+    {
+      "customer_state": "DF",
+      "n": 2080,
+      "late_n": 118,
+      "median_days": 11.364924768518518,
+      "late_pct": 5.673076923076923
+    },
+    {
+      "customer_state": "MG",
+      "n": 11354,
+      "late_n": 519,
+      "median_days": 10.313512731481481,
+      "late_pct": 4.571076272679232
+    },
+    {
+      "customer_state": "SP",
+      "n": 40494,
+      "late_n": 1820,
+      "median_days": 7.210271990740741,
+      "late_pct": 4.494493011310317
+    },
+    {
+      "customer_state": "PR",
+      "n": 4923,
+      "late_n": 199,
+      "median_days": 10.42550925925926,
+      "late_pct": 4.042250660166565
+    },
+    {
+      "customer_state": "AC",
+      "n": 80,
+      "late_n": 3,
+      "median_days": 18.356527777777778,
+      "late_pct": 3.75
+    },
+    {
+      "customer_state": "AP",
+      "n": 67,
+      "late_n": 2,
+      "median_days": 24.347025462962964,
+      "late_pct": 2.985074626865672
+    },
+    {
+      "customer_state": "RO",
+      "n": 243,
+      "late_n": 7,
+      "median_days": 17.582361111111112,
+      "late_pct": 2.880658436213992
+    },
+    {
+      "customer_state": "AM",
+      "n": 145,
+      "late_n": 4,
+      "median_days": 25.875138888888888,
+      "late_pct": 2.7586206896551726
+    }
+  ],
+  "spearman": [
+    {
+      "variable": "delivery_days",
+      "n": 95824,
+      "rho": -0.23457864310585042
+    },
+    {
+      "variable": "delay_days",
+      "n": 95824,
+      "rho": -0.1764424439313343
+    },
+    {
+      "variable": "freight",
+      "n": 95824,
+      "rho": -0.08821539821931189
+    },
+    {
+      "variable": "freight_ratio",
+      "n": 95824,
+      "rho": -0.031015273298819247
+    },
+    {
+      "variable": "value_items",
+      "n": 95824,
+      "rho": -0.02880756136419463
+    }
+  ],
+  "pearson": {
+    "delivery_days": {
+      "delivery_days": 1.0,
+      "delay_days": 0.6078239510205311,
+      "value_items": 0.055607683523589024,
+      "freight": 0.16717092483275559,
+      "payment_total": 0.06964046340450278,
+      "freight_ratio": 0.08001386467096448
+    },
+    "delay_days": {
+      "delivery_days": 0.6078239510205311,
+      "delay_days": 1.0,
+      "value_items": -0.013427494719031017,
+      "freight": -0.04932724977850318,
+      "payment_total": -0.017730853514337803,
+      "freight_ratio": -0.03187397589911332
+    },
+    "value_items": {
+      "delivery_days": 0.055607683523589024,
+      "delay_days": -0.013427494719031017,
+      "value_items": 1.0,
+      "freight": 0.41117784365391885,
+      "payment_total": 0.9959354757592599,
+      "freight_ratio": -0.2989601136663213
+    },
+    "freight": {
+      "delivery_days": 0.16717092483275559,
+      "delay_days": -0.04932724977850318,
+      "value_items": 0.41117784365391885,
+      "freight": 1.0,
+      "payment_total": 0.49147373136753847,
+      "freight_ratio": 0.10207882865681796
+    },
+    "payment_total": {
+      "delivery_days": 0.06964046340450278,
+      "delay_days": -0.017730853514337803,
+      "value_items": 0.9959354757592599,
+      "freight": 0.49147373136753847,
+      "payment_total": 1.0,
+      "freight_ratio": -0.27556757889088945
+    },
+    "freight_ratio": {
+      "delivery_days": 0.08001386467096448,
+      "delay_days": -0.03187397589911332,
+      "value_items": -0.2989601136663213,
+      "freight": 0.10207882865681796,
+      "payment_total": -0.27556757889088945,
+      "freight_ratio": 1.0
+    }
+  },
+  "pearson_n": {
+    "delivery_days": {
+      "delivery_days": 96470,
+      "delay_days": 96470,
+      "value_items": 96470,
+      "freight": 96470,
+      "payment_total": 96469,
+      "freight_ratio": 96470
+    },
+    "delay_days": {
+      "delivery_days": 96470,
+      "delay_days": 96470,
+      "value_items": 96470,
+      "freight": 96470,
+      "payment_total": 96469,
+      "freight_ratio": 96470
+    },
+    "value_items": {
+      "delivery_days": 96470,
+      "delay_days": 96470,
+      "value_items": 96470,
+      "freight": 96470,
+      "payment_total": 96469,
+      "freight_ratio": 96470
+    },
+    "freight": {
+      "delivery_days": 96470,
+      "delay_days": 96470,
+      "value_items": 96470,
+      "freight": 96470,
+      "payment_total": 96469,
+      "freight_ratio": 96470
+    },
+    "payment_total": {
+      "delivery_days": 96469,
+      "delay_days": 96469,
+      "value_items": 96469,
+      "freight": 96469,
+      "payment_total": 96469,
+      "freight_ratio": 96469
+    },
+    "freight_ratio": {
+      "delivery_days": 96470,
+      "delay_days": 96470,
+      "value_items": 96470,
+      "freight": 96470,
+      "payment_total": 96469,
+      "freight_ratio": 96470
+    }
+  },
+  "review_freq": {
+    "1": 11363,
+    "2": 3131,
+    "3": 8133,
+    "4": 19038,
+    "5": 57008
+  },
+  "status": {
+    "delivered": 96478,
+    "shipped": 1107,
+    "canceled": 625,
+    "unavailable": 609,
+    "invoiced": 314,
+    "processing": 301,
+    "created": 5,
+    "approved": 2
+  },
+  "monthly": {
+    "2016-09": 4,
+    "2016-10": 324,
+    "2016-11": 0,
+    "2016-12": 1,
+    "2017-01": 800,
+    "2017-02": 1780,
+    "2017-03": 2682,
+    "2017-04": 2404,
+    "2017-05": 3700,
+    "2017-06": 3245,
+    "2017-07": 4026,
+    "2017-08": 4331,
+    "2017-09": 4285,
+    "2017-10": 4631,
+    "2017-11": 7544,
+    "2017-12": 5673,
+    "2018-01": 7269,
+    "2018-02": 6728,
+    "2018-03": 7211,
+    "2018-04": 6939,
+    "2018-05": 6873,
+    "2018-06": 6167,
+    "2018-07": 6292,
+    "2018-08": 6512,
+    "2018-09": 16,
+    "2018-10": 4
+  },
+  "delay_buckets": [
+    {
+      "group": "No prazo",
+      "n": 89443,
+      "low_pct": 9.267354628087162
+    },
+    {
+      "group": "1-3",
+      "n": 1852,
+      "low_pct": 32.12742980561555
+    },
+    {
+      "group": "4-7",
+      "n": 1748,
+      "low_pct": 67.67734553775743
+    },
+    {
+      "group": "8-14",
+      "n": 1446,
+      "low_pct": 80.15214384508991
+    },
+    {
+      "group": "15 ou mais",
+      "n": 1335,
+      "low_pct": 78.35205992509363
+    }
+  ],
+  "counts": {
+    "orders": 99441,
+    "delivered_status": 96478,
+    "logistics": 96470,
+    "logistics_reviewed": 95824,
+    "late": 6534,
+    "reviewed": 98673,
+    "missing_review": 768,
+    "selected_missing_review": 0,
+    "missing_items": 775,
+    "missing_payment": 1,
+    "payment_mismatch_n": 303,
+    "payment_comparable_n": 98665,
+    "payment_difference_abs_sum": 3271.9500000004136,
+    "multi_item_orders": 9803,
+    "multi_payment_orders": 2961,
+    "unique_customers": 96096,
+    "valid_logistics_missing_review": 646,
+    "non_delivered_with_delivery_date": 6,
+    "delivered_missing_delivery_date": 8,
+    "multiple_review_conflicts": 202
+  },
+  "period": {
+    "start": "2016-09-04 21:15:19",
+    "end": "2018-10-17 17:30:18"
+  },
+  "checks": [
+    "PASS: agregação, pagamentos múltiplos, avaliação mais recente, data ausente e entrega no dia previsto",
+    "PASS: unicidade e cardinalidade das junções; chaves; reconciliação global de valores"
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5",
+    "matplotlib": "3.11.2"
+  }
+}

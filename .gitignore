@@ -1,0 +1,7 @@
+data/
+__pycache__/
+sources/*.html
+sources/*.txt
+analysis/orders_analytic.csv
+.ipynb_checkpoints/
+tmp/

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "dataset_download",
+    "url": "https://www.kaggle.com/api/v1/datasets/download/olistbr/brazilian-ecommerce",
+    "access_utc": "2026-10-06T01:46:46.326790+00:00",
+    "status": 200,
+    "content_type": "application/zip",
+    "bytes": 44717580,
+    "sha256": "967e41e04fc306fe604e2a693f488995a8b41e5047418f8a5c8e4abd6deca784",
+    "file": "data\\dataset_download.zip"
+  },
+  {
+    "name": "dataset_metadata",
+    "url": "https://www.kaggle.com/api/v1/datasets/list/olistbr/brazilian-ecommerce",
+    "access_utc": "2026-10-06T01:46:51.166768+00:00",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 3323,
+    "sha256": "f33d7b74914eb63950ddb6a07c88fba2ef9296543fdc1c29bf8dd49a18456707",
+    "file": "sources\\dataset_metadata.json"
+  },
+  {
+    "name": "olist_sobre",
+    "url": "https://olist.com/sobre-nos/",
+    "access_utc": "2026-10-06T01:46:51.403987+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 316247,
+    "sha256": "9d3eacd1f87b0d08a8aca1088bcbf0f9717df43d1a3d6f92c3fa3bcd4ab739b8",
+    "file": "sources\\olist_sobre.html"
+  },
+  {
+    "name": "olist_agentes",
+    "url": "https://olist.com/agentes/",
+    "access_utc": "2026-10-06T01:46:51.647998+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 512049,
+    "sha256": "0c50eb62e6d7cfcc14406c01f861770211046e90e1c0e819bc95943a53e20b0a",
+    "file": "sources\\olist_agentes.html"
+  },
+  {
+    "name": "olist_colaboradores_historico",
+    "url": "https://olist.com/blog/olist/olist-news/perfil-do-consumidor-no-e-commerce/",
+    "access_utc": "2026-10-06T01:46:51.783996+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 277079,
+    "sha256": "434038d9b4194f5c118825f5778af7d11461a50583b91a2f55ce4f044c2c1310",
+    "file": "sources\\olist_colaboradores_historico.html"
+  },
+  {
+    "name": "navarro_descritiva",
+    "url": "https://learningstatisticswithr.com/05-descriptives.html",
+    "access_utc": "2026-10-06T01:46:53.425448+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 260829,
+    "sha256": "cd330b1b0443658cbad42d3512b762368901b363fc9e0156af2a47965e3a30ee",
+    "file": "sources\\navarro_descritiva.html"
+  },
+  {
+    "name": "oliveira_visualizacao",
+    "url": "https://github.com/Rogerio-mack/Visualizacao-de-Dados-em-Python",
+    "access_utc": "2026-10-06T01:46:53.921937+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 283304,
+    "sha256": "7cc41fcf8efee94a29fe2648692e382ec307e63258def371cad564c5efb0ad60",
+    "file": "sources\\oliveira_visualizacao.html"
+  },
+  {
+    "name": "data_to_viz",
+    "url": "https://www.data-to-viz.com/",
+    "access_utc": "2026-10-06T01:46:54.821495+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 280691,
+    "sha256": "5ea42eb67bfba4b7b0dd7c8adc549ad24b15fbeee405f9899f5d3287839681a6",
+    "file": "sources\\data_to_viz.html"
+  },
+  {
+    "name": "licenca",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "access_utc": "2026-10-06T01:46:55.462152+00:00",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 37146,
+    "sha256": "ca0597fd98c6fb2417993e867b5cbc91ebdc55e24839c38e4674e8c78d817f17",
+    "file": "sources\\licenca.html"
+  }
+]
