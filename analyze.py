@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT.parent / 'tmp' / 'python'))
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -249,6 +250,37 @@ def main():
     ax.set_ylim(0,pair.freight.max()*1.1)
     ax.set_xlabel('Valor dos itens (UM; escala logarítmica)');ax.set_ylabel('Frete (UM; escala simétrica log)')
     save('scatter')
+    # Narrative charts make the denominator and operational distinction visible.
+    on_time=next(g for g in groups if not g['late'])
+    late_group=next(g for g in groups if g['late'])
+    late_pct=100*logistics.late.mean()
+    fig, ax=plt.subplots(figsize=(8,2.5))
+    ax.barh([0],[100-late_pct],color='#126E82',height=.48,label='Pontuais')
+    ax.barh([0],[late_pct],left=[100-late_pct],color='#CC7048',height=.48,label='Atrasados')
+    ax.text((100-late_pct)/2,0,f"{100-late_pct:.2f}%".replace('.',',')+f"\n{int(logistics.late.eq(False).sum()):,} pedidos".replace(',', '.'),ha='center',va='center',color='white',fontweight='bold')
+    ax.text(100-late_pct/2,0,f"{late_pct:.2f}%".replace('.',',')+f"\n{int(logistics.late.sum()):,}".replace(',', '.'),ha='center',va='center',color='white',fontweight='bold')
+    ax.set_xlim(0,100);ax.set_yticks([]);ax.set_xlabel('Entregas válidas (%)');ax.legend(loc='lower center',bbox_to_anchor=(.5,-.62),ncol=2,frameon=False)
+    save('story_timeliness')
+    fig, ax=plt.subplots(figsize=(8,3.1))
+    vals=[on_time['low_pct'],late_group['low_pct']]
+    bars=ax.bar(['Pontuais','Atrasados'],vals,color=['#126E82','#CC7048'],width=.58)
+    for bar,value,g in zip(bars,vals,[on_time,late_group]):
+        ax.text(bar.get_x()+bar.get_width()/2,value+2,f'{value:.2f}%'.replace('.',',')+f'\nn={g["n"]:,}'.replace(',', '.'),ha='center',va='bottom',fontweight='bold')
+    gap=late_group['low_pct']-on_time['low_pct']
+    ax.text(.5,.88,f"Diferença observada: {gap:.2f} p.p.".replace('.',','),transform=ax.transAxes,ha='center',color='#23313A',fontsize=11)
+    ax.set_ylim(0,78);ax.set_ylabel('Avaliações 1 ou 2 (%)');ax.grid(axis='y',alpha=.2);ax.set_axisbelow(True)
+    save('story_reviews')
+    regional=state.loc[['AL','SP']]
+    fig,(ax1,ax2)=plt.subplots(1,2,figsize=(8,3.4))
+    colors_reg=['#CC7048','#126E82']
+    ax1.barh(['AL','SP'],regional.late_pct,color=colors_reg)
+    for y,(uf,r) in enumerate(regional.iterrows()):ax1.text(r.late_pct+.6,y,f'{r.late_pct:.2f}%'.replace('.',','),va='center',fontweight='bold')
+    ax1.set_xlim(0,28);ax1.set_xlabel('Atrasos / pedidos da UF (%)');ax1.set_title('Taxa')
+    ax2.barh(['AL','SP'],regional.late_n,color=colors_reg)
+    for y,(uf,r) in enumerate(regional.iterrows()):ax2.text(r.late_n+45,y,f'{int(r.late_n):,} de {int(r.n):,}'.replace(',', '.'),va='center',fontweight='bold')
+    ax2.set_xlim(0,2200);ax2.set_xlabel('Pedidos atrasados (n)');ax2.set_title('Volume')
+    fig.suptitle('Taxa e volume apontam prioridades diferentes',fontweight='bold')
+    save('story_uf')
     both=d[d.value_items.notna() & d.payment_total.notna()]
     mismatch=((both.value_items+both.freight-both.payment_total).abs()>.01+1e-8)
     raw_selected_missing=int(selected.review_score.isna().sum())
@@ -282,3 +314,5 @@ def main():
     print(json.dumps({k:result[k] for k in ['counts','anomalies','repeat_reviews','period','review_groups','spearman','checks']},ensure_ascii=False,indent=2))
 
 if __name__=='__main__':main()
+
+
